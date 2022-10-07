@@ -2,14 +2,25 @@
 
 int updateFrequency = 2000  // ms, modifiable
 
+int numOfData = 3;  // temp, pressure and salinity
+
+int dataList[];
+
 void setup() {
 	Serial.begin(9600);
 }
 
 void loop() {
 	// return getSensorData() values to a list of current data to send to land
-	delay(updateFrequency);  // time between sensor update
+	
+        for (int i; i < numOfData); i++) {
+                dataList[i] = getSensorData()[i];  // unsure if works as intended
+        }
+
         returnData(dataList);
+
+        delay(updateFrequency);  // time between sensor update
+
 }
 
 float getSensorData() {
