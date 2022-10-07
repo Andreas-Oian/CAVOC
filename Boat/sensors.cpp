@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list> 
 
 float convertTempDataToCelsius(tempSensorOutput) {
 	float temp;
@@ -22,4 +23,8 @@ float convertSalineDataToPercent(salinitySensorOutput) {
 	// convert raw salinity sensor output data to g/kg
 
 	return salinity;
+}
+
+void returnData(dataList) {
+        // transmit list of data through radio transmission
 }
