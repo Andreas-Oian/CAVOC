@@ -9,6 +9,7 @@ void setup() {
 void loop() {
 	// return getSensorData() values to a list of current data to send to land
 	delay(updateFrequency);  // time between sensor update
+        returnData(dataList);
 }
 
 float getSensorData() {
